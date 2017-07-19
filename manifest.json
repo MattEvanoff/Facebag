@@ -1,0 +1,31 @@
+{
+	"name": "Facebag",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Facebag",
+	"author": "Matt Evanoff - rtpmatt@gmail.com",
+	"homepage_url": "http://www.mattevanoff.com",
+	"permissions": [
+		"http://*.facebook.com/*",
+		"https://*.facebook.com/*"
+	],
+	"browser_action": {
+		"default_icon": "icon38.png",
+		"default_title": "Facebag",
+		"default_popup": "Facebag-popout.html"
+	},
+	"icons": {
+		"128": "icon-128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*.facebook.com/*", "https://*.facebook.com/*"],
+			"js": ["Facebag-pageload.js"],
+			"run_at": "document_end"
+		}
+	],
+	"options_ui": {
+		"page": "prefs.html",
+		"chrome_style": true
+	}
+}

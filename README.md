@@ -1,0 +1,1 @@
+Removes Comment Box, Like button, and Status Box From Facebook
